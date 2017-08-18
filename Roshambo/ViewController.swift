@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         rockButton.setTitleColor(UIColor.red, for: .normal)
         view.addSubview(rockButton)
         rockButton.addTarget(ViewController(), action: #selector(ViewController.humanHasRock), for: .touchUpInside)
-//        print("in ViewDidLoad,",type(of: ViewController()))
+        print("in ViewDidLoad,",type(of: ViewController()),type(of: rockButton))
 
     }
     
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         print("in VC, HumanHas : \(humanHas)", "; ComputerHas :", computerHas! )
         
         //invoke the resultViewController
-        var nextController : ResultViewController
+        let nextController : ResultViewController
         nextController = storyboard?.instantiateViewController(withIdentifier: "resultView") as! ResultViewController
         nextController.computerHas = computerHas!
         nextController.humanHas = humanHas

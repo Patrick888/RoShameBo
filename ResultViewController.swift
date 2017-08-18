@@ -81,6 +81,7 @@ class ResultViewController: UIViewController {
         
         // Update the TextField and three images
         informResult.text = winOrLost
+        informResult.isEnabled = false
         human.image = UIImage(named: humanHas!)
         computer.image = UIImage(named: computerHas!)
         result.image = UIImage(named: winOrLost!)
