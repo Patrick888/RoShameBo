@@ -60,6 +60,29 @@ class ViewController: UIViewController {
         return computerHas
     }
     
+    
+    
+//    // this prepare for segue is for scissor button only.
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if ((sender as AnyObject).tag)! == 1 {
+//            let nextController = segue.destination as! ResultViewController
+//            nextController.computerHas = computerHas!
+//            nextController.humanHas = humanHas
+//        }
+//    }
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showResult" && ((sender as AnyObject).tag)! == 1 {
+//            print("prepare for segue got called and inputs are segue=\(segue) and sender=\(sender)")
+//            print("seque.destination is \(segue.destination) type is \(type(of: segue.destination)) and segue.identifier is \(segue.identifier)")
+//            
+//            let nextController = segue.destination as! ResultViewController
+//            nextController.computerHas = computerHas!
+//            nextController.humanHas = humanHas
+//        }
+//    }
+    
+    // prepare for segue to pass information to next viewController. this trigger by both Paper and Scissor
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showResult" {
         let nextController = segue.destination as! ResultViewController
@@ -72,6 +95,7 @@ class ViewController: UIViewController {
         humanHas = "paper"
         computerHas = randomValue()
         print("in VC, HumanHas : \(humanHas)", "; ComputerHas :", computerHas! )
+        performSegue(withIdentifier: "showResult", sender: papper)
 
     }
     

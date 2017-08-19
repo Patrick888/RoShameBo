@@ -30,7 +30,7 @@ class HistoryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print("tableView #ofRow got called, the section input is \(section) and the array size is \(resultArray.count)")
+        print("tableView #ofRow got called, the section input is \(section) and the array size is \(resultArray.count) and the tableview parameter is \(tableView)")
 
         return resultArray.count
     }
