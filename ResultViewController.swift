@@ -17,13 +17,14 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var result: UIImageView!
     
     
-    var humanHas : String?
-    var computerHas : String?
-    var winOrLost : String?
+    var humanHas : String! // ImplicitlyUnwrappedOptional<String>
+    var computerHas : String!
+    var winOrLost : String!
 //    var resultDictionary = [String:String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("resultVC viewDidLoad got called and the humanHas is type of ", type(of: humanHas))
 
         // Do any additional setup after loading the view.
         
@@ -88,15 +89,16 @@ class ResultViewController: UIViewController {
         
         // MARK: Build dictionary and store it to array in History.swift
         
-        resultDictionary = ["Human":humanHas! , "Computer":computerHas! ,"Result":winOrLost!]
+        resultDictionary = ["Human":humanHas , "Computer":computerHas ,"Result":winOrLost]
         resultArray.append(resultDictionary)
-        print("         \(resultArray.count) the result array is : \(resultArray)", type(of: resultDictionary))
+//        print("         \(resultArray.count) the result array is : \(resultArray)", type(of: resultDictionary))
         
 
     }
 
     
     @IBAction func dismiss(_ sender: Any) {
+        print("IBAction Dismiss got called in ResultVC")
         self.dismiss(animated: true, completion: nil)
         
     }

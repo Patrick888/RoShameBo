@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		22022D741F3A8C26005B4977 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22022D731F3A8C26005B4977 /* History.swift */; };
 		22022D761F3A8DEE005B4977 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22022D751F3A8DEE005B4977 /* HistoryTableViewController.swift */; };
+		22354C551F492D9A00D3BC7F /* DetailResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22354C541F492D9A00D3BC7F /* DetailResultViewController.swift */; };
 		223DB3071F229DBA0076585A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB3061F229DBA0076585A /* AppDelegate.swift */; };
 		223DB3091F229DBA0076585A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB3081F229DBA0076585A /* ViewController.swift */; };
 		223DB30C1F229DBA0076585A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223DB30A1F229DBA0076585A /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		22022D731F3A8C26005B4977 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		22022D751F3A8DEE005B4977 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		22354C541F492D9A00D3BC7F /* DetailResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailResultViewController.swift; sourceTree = "<group>"; };
 		223DB3031F229DBA0076585A /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223DB3061F229DBA0076585A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223DB3081F229DBA0076585A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,12 +65,13 @@
 				22022D731F3A8C26005B4977 /* History.swift */,
 				223DB3061F229DBA0076585A /* AppDelegate.swift */,
 				223DB3081F229DBA0076585A /* ViewController.swift */,
+				22022D751F3A8DEE005B4977 /* HistoryTableViewController.swift */,
+				22354C541F492D9A00D3BC7F /* DetailResultViewController.swift */,
 				223DB3181F229E710076585A /* ResultViewController.swift */,
 				223DB30A1F229DBA0076585A /* Main.storyboard */,
 				223DB30D1F229DBA0076585A /* Assets.xcassets */,
 				223DB30F1F229DBA0076585A /* LaunchScreen.storyboard */,
 				223DB3121F229DBA0076585A /* Info.plist */,
-				22022D751F3A8DEE005B4977 /* HistoryTableViewController.swift */,
 			);
 			path = Roshambo;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				223DB3071F229DBA0076585A /* AppDelegate.swift in Sources */,
 				22022D741F3A8C26005B4977 /* History.swift in Sources */,
 				223DB3191F229E710076585A /* ResultViewController.swift in Sources */,
+				22354C551F492D9A00D3BC7F /* DetailResultViewController.swift in Sources */,
 				22022D761F3A8DEE005B4977 /* HistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

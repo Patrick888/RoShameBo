@@ -23,10 +23,10 @@ class HistoryTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -53,6 +53,22 @@ class HistoryTableViewController: UITableViewController {
         return cell
     }
 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let rowDictionary = resultArray[indexPath.row]
+        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "detailResult") as! DetailResultViewController
+        // instantiateViewController instantiate and return an VC matching to "withIdentifier". since it return an UIViewController, downcast to the subClass DetailResultViewController
+        detailViewController.result = rowDictionary["Result"]
+        detailViewController.text = rowDictionary["Result"]!
+
+        print("table view didSelectRow got called and the",type(of: detailViewController.text) ,rowDictionary["Result"]!, type(of: rowDictionary["Result"]) )
+        print("what is indexPath in delgegate method table View",indexPath)
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

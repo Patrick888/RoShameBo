@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IPH-Pw-weY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="BACK "/>
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="Oe2-N3-8oX"/>
+                                <segue destination="IPH-Pw-weY" kind="show" id="Oe2-N3-8oX"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -61,6 +61,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIO-es-2AL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="561" y="-515"/>
+        </scene>
+        <!--Detail Result View Controller-->
+        <scene sceneID="sfF-ip-bFc">
+            <objects>
+                <viewController storyboardIdentifier="detailResult" id="8Wp-oX-YL6" userLabel="Detail Result View Controller" customClass="DetailResultViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sZD-pK-Ker"/>
+                        <viewControllerLayoutGuide type="bottom" id="bH1-zg-Tnu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GcE-ZO-cpp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Om9-uB-Nkn" userLabel="Detail Image View">
+                                <rect key="frame" x="16" y="20" width="343" height="281"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="281" id="H5C-fr-CaA"/>
+                                    <constraint firstAttribute="width" constant="343" id="zTC-U0-Rpr"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tJx-H0-LxL" userLabel="Detail Text View">
+                                <rect key="frame" x="67" y="309" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Om9-uB-Nkn" firstAttribute="trailing" secondItem="GcE-ZO-cpp" secondAttribute="trailingMargin" id="0C3-XF-tRs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tJx-H0-LxL" secondAttribute="trailing" constant="52" id="F5S-HU-0fW"/>
+                            <constraint firstItem="tJx-H0-LxL" firstAttribute="leading" secondItem="GcE-ZO-cpp" secondAttribute="leadingMargin" constant="51" id="QSI-FF-G8N"/>
+                            <constraint firstItem="tJx-H0-LxL" firstAttribute="top" secondItem="Om9-uB-Nkn" secondAttribute="bottom" constant="8" id="Rwt-a7-WV6"/>
+                            <constraint firstItem="Om9-uB-Nkn" firstAttribute="top" secondItem="sZD-pK-Ker" secondAttribute="bottom" id="TVy-Sa-AJZ"/>
+                            <constraint firstItem="bH1-zg-Tnu" firstAttribute="top" secondItem="tJx-H0-LxL" secondAttribute="bottom" constant="230" id="Ufk-So-xdr"/>
+                            <constraint firstItem="Om9-uB-Nkn" firstAttribute="leading" secondItem="GcE-ZO-cpp" secondAttribute="leadingMargin" id="euX-kv-jBl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailImage" destination="Om9-uB-Nkn" id="Sy0-3c-ONQ"/>
+                        <outlet property="detailTextView" destination="tJx-H0-LxL" id="sSq-KN-BSs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tn-lt-l8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444" y="-516"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -105,7 +152,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RoShamBo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YZ-dC-8Sr">
-                                <rect key="frame" x="99" y="94" width="176" height="21"/>
+                                <rect key="frame" x="99" y="138" width="176" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="XZI-5I-Guz"/>
                                 </constraints>
@@ -129,6 +176,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="mBn-9U-vNg" secondAttribute="trailing" constant="148" id="s2P-B7-cxa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7Rp-Zm-1LL"/>
                     <connections>
                         <outlet property="papper" destination="fLg-AY-gEH" id="vry-GA-79i"/>
                         <outlet property="scissor" destination="mBn-9U-vNg" id="yB0-MH-FPr"/>
@@ -136,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-218.40000000000001" y="244.22788605697153"/>
+            <point key="canvasLocation" x="720.79999999999995" y="244.22788605697153"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="elz-Pg-7e6">
@@ -214,7 +262,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6iu-tp-LB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504.80000000000001" y="243.32833583208398"/>
+            <point key="canvasLocation" x="1444" y="243.32833583208398"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Gw-g5-Trc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IPH-Pw-weY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tr6-Va-7FU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="S8t-zH-7j3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8A-v9-OU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-218.40000000000001" y="244.22788605697153"/>
         </scene>
     </scenes>
     <resources>

@@ -42,7 +42,8 @@ class ViewController: UIViewController {
         nextController = storyboard?.instantiateViewController(withIdentifier: "resultView") as! ResultViewController
         nextController.computerHas = computerHas!
         nextController.humanHas = humanHas
-        present(nextController, animated: true, completion: nil)
+//        present(nextController, animated: true, completion: nil)
+        navigationController?.pushViewController(nextController, animated: true)
     }
     
     func randomValue() -> String {
@@ -104,6 +105,10 @@ class ViewController: UIViewController {
         humanHas = "scissor"
         computerHas = randomValue()
         print("in VC, HumanHas : \(humanHas)", "; ComputerHas :", computerHas! )
+    }
+    
+    deinit {
+        print("deinit got called in rootVC:viewController")
     }
     
 }
