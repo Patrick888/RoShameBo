@@ -99,7 +99,8 @@ class ResultViewController: UIViewController {
     
     @IBAction func dismiss(_ sender: Any) {
         print("IBAction Dismiss got called in ResultVC")
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
         
     }
     

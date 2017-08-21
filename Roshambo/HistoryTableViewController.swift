@@ -62,7 +62,7 @@ class HistoryTableViewController: UITableViewController {
         detailViewController.text = rowDictionary["Result"]!
 
         print("table view didSelectRow got called and the",type(of: detailViewController.text) ,rowDictionary["Result"]!, type(of: rowDictionary["Result"]) )
-        print("what is indexPath in delgegate method table View",indexPath)
+        print("what is indexPath in delgegate method table View ->",indexPath,type(of: indexPath))
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     

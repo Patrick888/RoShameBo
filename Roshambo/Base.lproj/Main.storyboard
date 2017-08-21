@@ -10,7 +10,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--History Table View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="fOF-6l-eRs">
+            <objects>
+                <tabBarController id="FtU-lz-V9V" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="UF7-xO-QJq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="s6f-9d-2Ps" kind="relationship" relationship="viewControllers" id="9Yx-6i-FQ9"/>
+                        <segue destination="jcG-xO-1Ua" kind="relationship" relationship="viewControllers" id="so1-oF-Man"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6FA-s8-QPX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1406" y="-501"/>
+        </scene>
+        <!--Table  View-->
         <scene sceneID="fnO-6A-4ZJ">
             <objects>
                 <tableViewController id="s6f-9d-2Ps" customClass="HistoryTableViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,14 +36,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hVd-T5-TPM" userLabel="Back">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="BACK "/>
-                            <connections>
-                                <segue destination="IPH-Pw-weY" kind="show" id="Oe2-N3-8oX"/>
-                            </connections>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" textLabel="fvu-TE-fqL" detailTextLabel="cvb-gf-FgT" style="IBUITableViewCellStyleValue1" id="Z6V-xs-Z0D">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -57,10 +67,63 @@
                             <outlet property="delegate" destination="s6f-9d-2Ps" id="WLg-vM-uNp"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Table  View" id="9ki-SE-ZDv" userLabel="Table View"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIO-es-2AL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561" y="-515"/>
+            <point key="canvasLocation" x="2196" y="-238"/>
+        </scene>
+        <!--Collection View-->
+        <scene sceneID="FQo-R0-gxY">
+            <objects>
+                <collectionViewController id="jcG-xO-1Ua" customClass="HistoryCollectionViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eoT-KO-b2P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ee4-wP-XN9">
+                            <size key="itemSize" width="166" height="148"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="historyCollectionCell" id="KAt-ww-JUP" customClass="HistoryCollectionViewCell" customModule="Roshambo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="166" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="166" height="148"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kxV-PU-bFv">
+                                            <rect key="frame" x="20" y="13" width="126" height="116"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkJ-3r-Zo1">
+                                            <rect key="frame" x="20" y="127" width="126" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="cellImage" destination="kxV-PU-bFv" id="GgT-gP-VEF"/>
+                                    <outlet property="cellLabel" destination="YkJ-3r-Zo1" id="M7c-L1-zVS"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="jcG-xO-1Ua" id="2V8-Ee-ySI"/>
+                            <outlet property="delegate" destination="jcG-xO-1Ua" id="6od-vR-udZ"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Collection View" id="KPp-rS-zhq" userLabel="Collection View"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqG-cS-otR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2200.8000000000002" y="-887.40629685157433"/>
         </scene>
         <!--Detail Result View Controller-->
         <scene sceneID="sfF-ip-bFc">
@@ -107,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tn-lt-l8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="-516"/>
+            <point key="canvasLocation" x="2919" y="-501"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -148,7 +211,7 @@
                                     <color key="titleColor" red="0.98042500019073486" green="0.22734336700369817" blue="0.18853158618607951" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="s6f-9d-2Ps" kind="show" identifier="showHistory" id="X3r-vy-gti"/>
+                                    <segue destination="FtU-lz-V9V" kind="show" id="EY9-zn-vgg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RoShamBo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YZ-dC-8Sr">
@@ -184,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="720.79999999999995" y="244.22788605697153"/>
+            <point key="canvasLocation" x="617" y="244"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="elz-Pg-7e6">
@@ -262,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6iu-tp-LB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="243.32833583208398"/>
+            <point key="canvasLocation" x="1407" y="267"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Gw-g5-Trc">
